@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RAFWEB.API", "RAFWEB.API.csproj", "{7DA4AEA3-46E4-48EF-8BFD-8E5303186B57}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RAFWEB.Core", "..\RAFWEB.Core\RAFWEB.Core.csproj", "{83339454-B613-4F4F-A905-6B3AAD675760}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RAFWEB.Data", "..\RAFWEB.Data\RAFWEB.Data.csproj", "{15949FF3-35DE-43CC-8437-A5F220AC6170}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DA4AEA3-46E4-48EF-8BFD-8E5303186B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA4AEA3-46E4-48EF-8BFD-8E5303186B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA4AEA3-46E4-48EF-8BFD-8E5303186B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA4AEA3-46E4-48EF-8BFD-8E5303186B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83339454-B613-4F4F-A905-6B3AAD675760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83339454-B613-4F4F-A905-6B3AAD675760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83339454-B613-4F4F-A905-6B3AAD675760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83339454-B613-4F4F-A905-6B3AAD675760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15949FF3-35DE-43CC-8437-A5F220AC6170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15949FF3-35DE-43CC-8437-A5F220AC6170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15949FF3-35DE-43CC-8437-A5F220AC6170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15949FF3-35DE-43CC-8437-A5F220AC6170}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61B1F476-E7D1-40AB-A8BE-C7C429529F9F}
+	EndGlobalSection
+EndGlobal
