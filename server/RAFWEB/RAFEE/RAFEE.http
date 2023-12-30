@@ -1,6 +1,0 @@
-@RAFEE_HostAddress = http://localhost:5144
-
-GET {{RAFEE_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

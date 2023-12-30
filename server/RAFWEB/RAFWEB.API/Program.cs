@@ -5,22 +5,26 @@ using RAFWEB.API.Configuration.Identity;
 using IdentityServer4;
 using IdentityServer4.AccessTokenValidation;
 using RAFWEB.API.Configuration.Extentions;
-using IdentityServer4.AspNetIdentity;
-using IdentityServer4.Validation;
-using Microsoft.AspNetCore.Identity;
 using RAFWEB.API.Configuration.IdentityServer;
 using System.Security.Claims;
+using MediatR;
+using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddPersistenceInfrastructure(builder.Configuration);
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<ApplicationContext>();
 builder.Services.AddIdentity();
+builder.Services.AddRepositoreis();
 builder.Services.AddSwaggerGen();
+builder.Services.AddPersistenceInfrastructure(builder.Configuration);
 builder.Services.AddIdentityServerInfrastructure(builder.Configuration);
+builder.Services.AddAutoMapper();
+builder.Services.AddApplicationLayer();
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy(IdentityServerConstants.LocalApi.PolicyName, policy =>
@@ -74,9 +78,12 @@ ScopeCreation.ConfigureScope(app);
 
 app.UseIdentityServer();
 
-app.UseAuthorization();
-app.UseAuthentication();
+app.UseRouting();
 
+
+
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();

@@ -21,9 +21,35 @@ namespace RAFWEB.API.Configuration.IdentityServer
             new(IdentityServerConstants.LocalApi.ScopeName),
         };
         }
+        public static IEnumerable<Client> GetClients(IdentityServerSettings identityServerSettings) => new List<Client>
+        {
+        new()
+        {
+            ClientId = identityServerSettings.AppId,
+            RequireClientSecret = false,
+            UpdateAccessTokenClaimsOnRefresh = true,
+            RequireConsent = false,
+            AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+            AllowedScopes =
+            {
+                IdentityServerConstants.LocalApi.ScopeName,
+                IdentityServerConstants.StandardScopes.OpenId,
+                IdentityServerConstants.StandardScopes.Profile,
+                "roles"
+            },
+            RefreshTokenExpiration = TokenExpiration.Sliding,
+            RefreshTokenUsage = TokenUsage.ReUse,
+            AccessTokenLifetime = identityServerSettings.AccessTokenLifetime,
+            IdentityTokenLifetime = identityServerSettings.IdentityTokenLifetime,
+            AuthorizationCodeLifetime = identityServerSettings.AuthorizationCodeLifetime,
+            SlidingRefreshTokenLifetime = identityServerSettings.SlidingRefreshTokenLifetime,
+            AbsoluteRefreshTokenLifetime = identityServerSettings.AbsoluteRefreshTokenLifetime,
+            AccessTokenType = AccessTokenType.Jwt,
+        },
+        };
 
-       
-        
+
+
 
         public static IEnumerable<IdentityResource> GetIdentityResources() => new List<IdentityResource>
     {

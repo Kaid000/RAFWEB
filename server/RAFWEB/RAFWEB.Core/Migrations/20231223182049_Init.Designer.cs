@@ -12,8 +12,8 @@ using RAFWEB.Core;
 namespace RAFWEB.Core.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20231215164429_Initial-create")]
-    partial class Initialcreate
+    [Migration("20231223182049_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
